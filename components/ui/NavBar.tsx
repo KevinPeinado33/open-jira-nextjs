@@ -1,5 +1,6 @@
 import { useContext } from 'react'
-import { AppBar, IconButton, Toolbar, Typography } from '@mui/material'
+import NextLink from 'next/link'
+import { AppBar, IconButton, Toolbar, Typography, Link } from '@mui/material'
 
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined'
 
@@ -21,7 +22,12 @@ export const NavBar = () => {
                     <MenuOutlinedIcon />
                 </IconButton>
 
-                <Typography variant='h6'>Q - Tasks</Typography>
+                <NextLink href='/' passHref legacyBehavior >
+                  <Link underline='none' color='white' >
+                    <Typography variant='h6'>Q - Tasks</Typography>
+                  </Link>
+                </NextLink>
+
             </Toolbar>
     </AppBar>
   )
